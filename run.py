@@ -5,7 +5,6 @@ def run_tdl():
     print('Welcome to our To-Do List app!')
     tdl = Tdl()
 
-    # start the loop
     while True:
         print("1: Add Task\n2: View Tasks\n3: Edit Task\n4: Delete Task\n5: Quit")
         option = input("Which option would you like to do? ")
@@ -18,9 +17,13 @@ def run_tdl():
         elif option == '2':
             tdl.view_tasks()
         elif option == '3':
-            pass
+            tdl.edit_task()
         elif option == '4':
-            pass
+            tdl.delete_task()
     print('Thank you for using our app!\nHere is your final list.')
-    print(tdl.tasks)
+    for t in tdl.tasks:
+        print(t)
+
     
+
+run_tdl()
